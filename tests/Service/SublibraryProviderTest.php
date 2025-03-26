@@ -17,6 +17,7 @@ class SublibraryProviderTest extends ApiTestCase
     {
         $eventDispatcher = new EventDispatcher();
         $this->sublibraryProvider = new SublibraryProvider(new TestOrganizationProvider(), $eventDispatcher);
+        $this->sublibraryProvider->setConfig(['library_code_local_data_attribute' => 'some_code']);
     }
 
     public function testGetSublibrary(): void

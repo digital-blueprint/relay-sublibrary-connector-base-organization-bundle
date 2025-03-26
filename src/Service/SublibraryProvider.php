@@ -15,13 +15,13 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class SublibraryProvider implements SublibraryProviderInterface
 {
-    public const ORGANIZATION_CODE_ATTRIBUTE_NAME = 'code';
-
     /** @var OrganizationProviderInterface */
     private $organizationProvider;
 
     /** @var EventDispatcherInterface */
     private $eventDispatcher;
+
+    private array $config;
 
     public function __construct(OrganizationProviderInterface $organizationProvider, EventDispatcherInterface $eventDispatcher)
     {
@@ -29,11 +29,17 @@ class SublibraryProvider implements SublibraryProviderInterface
         $this->eventDispatcher = $eventDispatcher;
     }
 
+    public function setConfig(array $config): void
+    {
+        $this->config = $config;
+    }
+
     public function getSublibrary(string $identifier, array $options = []): ?SublibraryInterface
     {
+        $libraryCodeLocalDataAttribute = $this->config['library_code_local_data_attribute'];
         $organization = null;
         try {
-            Options::requestLocalDataAttributes($options, [self::ORGANIZATION_CODE_ATTRIBUTE_NAME]);
+            Options::requestLocalDataAttributes($options, [$libraryCodeLocalDataAttribute]);
             $organization = $this->organizationProvider->getOrganizationById($identifier, $options);
         } catch (ApiError $exception) {
         }
@@ -43,7 +49,7 @@ class SublibraryProvider implements SublibraryProviderInterface
             $sublibrary = new BaseOrganizationSublibrary();
             $sublibrary->setIdentifier($organization->getIdentifier());
             $sublibrary->setName($organization->getName());
-            $sublibrary->setCode($organization->getLocalDataValue(self::ORGANIZATION_CODE_ATTRIBUTE_NAME));
+            $sublibrary->setCode($organization->getLocalDataValue($libraryCodeLocalDataAttribute));
         }
 
         $postEvent = new SublibraryProviderPostEvent($identifier, $sublibrary, $organization, $options);
