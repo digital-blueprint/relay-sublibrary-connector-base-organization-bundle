@@ -1,8 +1,9 @@
 # Changelog
 
-## Unreleased
+## v0.4.0
 
 * Drop support for PHP 8.1
+* Rename from DbpRelaySublibraryConnectorCampusonlineBundle to DbpRelaySublibraryConnectorBaseOrganizationBundle
 
 ## v0.3.0
 
