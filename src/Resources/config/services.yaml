@@ -1,7 +1,7 @@
 services:
-  Dbp\Relay\SublibraryConnectorCampusonlineBundle\Service\SublibraryProvider:
+  Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Service\SublibraryProvider:
     autowire: true
     autoconfigure: true
 
   Dbp\Relay\SublibraryBundle\API\SublibraryProviderInterface:
-    '@Dbp\Relay\SublibraryConnectorCampusonlineBundle\Service\SublibraryProvider'
+    '@Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Service\SublibraryProvider'

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dbp\Relay\SublibraryConnectorCampusonlineBundle\Tests;
+namespace Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Tests;
 
 use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
 

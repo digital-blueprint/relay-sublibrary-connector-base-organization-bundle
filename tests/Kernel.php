@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Dbp\Relay\SublibraryConnectorCampusonlineBundle\Tests;
+namespace Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Tests;
 
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
 use Dbp\Relay\CoreBundle\DbpRelayCoreBundle;
-use Dbp\Relay\SublibraryConnectorCampusonlineBundle\DbpRelaySublibraryConnectorCampusonlineBundle;
+use Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\DbpRelaySublibraryConnectorBaseOrganizationBundle;
 use Nelmio\CorsBundle\NelmioCorsBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
@@ -30,7 +30,7 @@ class Kernel extends BaseKernel
         yield new NelmioCorsBundle();
         yield new MonologBundle();
         yield new ApiPlatformBundle();
-        yield new DbpRelaySublibraryConnectorCampusonlineBundle();
+        yield new DbpRelaySublibraryConnectorBaseOrganizationBundle();
         yield new DbpRelayCoreBundle();
     }
 

@@ -1,5 +1,5 @@
 {
-    "name": "dbp/relay-sublibrary-connector-campusonline-bundle",
+    "name": "dbp/relay-sublibrary-connector-base-organization-bundle",
     "description": "A template bundle for the Relay API gateway",
     "type": "symfony-bundle",
     "license": "AGPL-3.0-or-later",
@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Dbp\\Relay\\SublibraryConnectorCampusonlineBundle\\": "src/"
+            "Dbp\\Relay\\SublibraryConnectorBaseOrganizationBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dbp\\Relay\\SublibraryConnectorCampusonlineBundle\\Tests\\": "tests/"
+            "Dbp\\Relay\\SublibraryConnectorBaseOrganizationBundle\\Tests\\": "tests/"
         }
     },
     "config": {

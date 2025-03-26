@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dbp\Relay\SublibraryConnectorCampusonlineBundle\Tests\Service;
+namespace Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Tests\Service;
 
 use Dbp\Relay\BaseOrganizationBundle\API\OrganizationProviderInterface;
 use Dbp\Relay\BaseOrganizationBundle\Entity\Organization;
 use Dbp\Relay\CoreBundle\Rest\Options;
-use Dbp\Relay\SublibraryConnectorCampusonlineBundle\Service\SublibraryProvider;
+use Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Service\SublibraryProvider;
 
 class TestOrganizationProvider implements OrganizationProviderInterface
 {

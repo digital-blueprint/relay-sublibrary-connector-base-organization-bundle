@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Dbp\Relay\SublibraryConnectorCampusonlineBundle\Tests\Service;
+namespace Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Tests\Service;
 
 use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
-use Dbp\Relay\SublibraryConnectorCampusonlineBundle\Service\SublibraryProvider;
+use Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Service\SublibraryProvider;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class SublibraryProviderTest extends ApiTestCase

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Dbp\Relay\SublibraryConnectorCampusonlineBundle\Event;
+namespace Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Event;
 
 use Dbp\Relay\SublibraryBundle\API\SublibraryInterface;
 
-class CoSublibrary implements SublibraryInterface
+class BaseOrganizationSublibrary implements SublibraryInterface
 {
     /**
      * @var string

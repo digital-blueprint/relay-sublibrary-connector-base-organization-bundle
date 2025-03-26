@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dbp\Relay\SublibraryConnectorCampusonlineBundle\Event;
+namespace Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Event;
 
 use Dbp\Relay\BaseOrganizationBundle\Entity\Organization;
 use Symfony\Contracts\EventDispatcher\Event;
@@ -12,7 +12,7 @@ class SublibraryProviderPostEvent extends Event
     /** @var string */
     private $organizationId;
 
-    /** @var CoSublibrary|null */
+    /** @var BaseOrganizationSublibrary|null */
     private $sublibrary;
 
     /** @var Organization|null */
@@ -21,7 +21,7 @@ class SublibraryProviderPostEvent extends Event
     /** @var array */
     private $options;
 
-    public function __construct(string $organizationId, ?CoSublibrary $sublibrary,
+    public function __construct(string $organizationId, ?BaseOrganizationSublibrary $sublibrary,
         ?Organization $organization, array $options = [])
     {
         $this->organizationId = $organizationId;
@@ -40,12 +40,12 @@ class SublibraryProviderPostEvent extends Event
         return $this->organization;
     }
 
-    public function setSublibrary(CoSublibrary $sublibrary)
+    public function setSublibrary(BaseOrganizationSublibrary $sublibrary)
     {
         $this->sublibrary = $sublibrary;
     }
 
-    public function getSublibrary(): ?CoSublibrary
+    public function getSublibrary(): ?BaseOrganizationSublibrary
     {
         return $this->sublibrary;
     }

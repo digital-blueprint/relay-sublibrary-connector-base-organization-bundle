@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Dbp\Relay\SublibraryConnectorCampusonlineBundle\Service;
+namespace Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Service;
 
 use Dbp\Relay\BaseOrganizationBundle\API\OrganizationProviderInterface;
 use Dbp\Relay\CoreBundle\Exception\ApiError;
 use Dbp\Relay\CoreBundle\Rest\Options;
 use Dbp\Relay\SublibraryBundle\API\SublibraryInterface;
 use Dbp\Relay\SublibraryBundle\API\SublibraryProviderInterface;
-use Dbp\Relay\SublibraryConnectorCampusonlineBundle\Event\CoSublibrary;
-use Dbp\Relay\SublibraryConnectorCampusonlineBundle\Event\SublibraryProviderPostEvent;
+use Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Event\BaseOrganizationSublibrary;
+use Dbp\Relay\SublibraryConnectorBaseOrganizationBundle\Event\SublibraryProviderPostEvent;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class SublibraryProvider implements SublibraryProviderInterface
@@ -40,7 +40,7 @@ class SublibraryProvider implements SublibraryProviderInterface
 
         $sublibrary = null;
         if ($organization !== null) {
-            $sublibrary = new CoSublibrary();
+            $sublibrary = new BaseOrganizationSublibrary();
             $sublibrary->setIdentifier($organization->getIdentifier());
             $sublibrary->setName($organization->getName());
             $sublibrary->setCode($organization->getLocalDataValue(self::ORGANIZATION_CODE_ATTRIBUTE_NAME));
