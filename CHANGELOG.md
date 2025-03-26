@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.1
+
+* Added new "library_code_local_data_attribute" config to specify the local data
+  attribute which was until now hardcoded to `code`.
+
 ## v0.4.0
 
 * Drop support for PHP 8.1
