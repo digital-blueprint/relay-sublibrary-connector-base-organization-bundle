@@ -12,3 +12,5 @@ You can install the bundle directly from [packagist.org](https://packagist.org/p
 ```bash
 composer require dbp/relay-sublibrary-connector-base-organization-bundle
 ```
+
+For more details see the [Documentation](./docs/README.md).
